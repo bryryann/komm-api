@@ -31,6 +31,12 @@ public class AppUser implements UserDetails {
 
     private Role role;
 
+    public AppUser(String username, String password, Role role) {
+        this.username = username;
+        this.password = password;
+        this.role = role;
+    }
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         if (this.role == Role.ADMIN)
