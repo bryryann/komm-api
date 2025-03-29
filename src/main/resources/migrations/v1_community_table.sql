@@ -1,0 +1,15 @@
+CREATE TABLE IF NOT EXISTS communities (
+    community_id INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY,
+    name VARCHAR(100) NOT NULL,
+    slug VARCHAR(100) UNIQUE NOT NULL,
+    description TEXT,
+    created_by BIGINT REFERENCES users(id) ON DELETE SET NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    updated_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    is_private BOOLEAN NOT NULL DEFAULT FALSE,
+    member_count INTEGER NOT NULL DEFAULT 0
+);
+
+CREATE TRIGGER update_community_timestamp
+BEFORE UPDATE ON communities
+FOR EACH ROW EXECUTE PROCEDURE update_timestamp();
