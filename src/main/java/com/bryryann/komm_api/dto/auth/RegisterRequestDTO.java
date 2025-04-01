@@ -1,4 +1,4 @@
-package com.bryryann.komm_api.dto;
+package com.bryryann.komm_api.dto.auth;
 
 import com.bryryann.komm_api.security.Role;
 

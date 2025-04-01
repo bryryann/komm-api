@@ -1,8 +1,8 @@
 package com.bryryann.komm_api.controller;
 
-import com.bryryann.komm_api.dto.LoginRequestDTO;
-import com.bryryann.komm_api.dto.LoginResponseDTO;
-import com.bryryann.komm_api.dto.RegisterRequestDTO;
+import com.bryryann.komm_api.dto.auth.LoginRequestDTO;
+import com.bryryann.komm_api.dto.auth.LoginResponseDTO;
+import com.bryryann.komm_api.dto.auth.RegisterRequestDTO;
 import com.bryryann.komm_api.model.AppUser;
 import com.bryryann.komm_api.repository.AppUserRepository;
 import com.bryryann.komm_api.service.TokenService;
