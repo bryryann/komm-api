@@ -41,8 +41,9 @@ public class CommunityController {
     }
 
     @PostMapping("")
-    public ResponseEntity<Object> newCommunity(@RequestBody NewCommunityRequestDTO dto) {
+    public ResponseEntity newCommunity(@RequestBody NewCommunityRequestDTO dto) {
         // TODO: Implement newCommunity() route.
+        return ResponseEntity.ok().build();
     }
 
 }
